@@ -29,6 +29,7 @@ public class JPAconfiguration {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		properties.setProperty("hibernate.show_sql", "true");
+		properties.setProperty("hibernate.format_sql", "true");
 		properties.setProperty("hibernate.hbm2ddl.auto", "update");
 		factoryBean.setJpaProperties(properties);
 		factoryBean.setPackagesToScan("br.com.casadocodigo.models");
