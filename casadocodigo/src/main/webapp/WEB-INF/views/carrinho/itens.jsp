@@ -88,15 +88,21 @@
 			          <td class="numeric-cell">item.preco</td>
 			          <td class="quantity-input-cell"><input type="number" min="0" readonly="readonly" id="quantidade" name="quantidade" value="${carrinhoCompras.getQuantidade(item) }"/></td>
 			          <td class="numeric-cell">${carrinhoCompras.getTotal(item) }</td>
-			          <td class="remove-item"><a href="/cart/change?218748921802387812&quantity=0"><img src="${contextPath }resources/imagens/excluir.png" alt="Excluir" title="Excluir" /></a></td>
+			          
+			          <td>
+				          <form action="" method="post">
+					          <input type="image" src="/excluir.png" alt="Excluir" title="Excluir"/>          
+				          </form>
+			          </td>
 			      </tr>
 		      </c:forEach>
 		      </tbody>
 			      <tfoot>
 			        <tr>
-			          <td colspan="3"><input type="submit" class="checkout" name="checkout" value="Finalizar compra" /></td>
-			          <td class="quantity-input-cell"><input type="submit" class="update-cart" disabled="disabled" name="update" value=""/></td>
-			          <td class="numeric-cell">R$ 59,90</td><td></td>
+			          <td colspan="3">
+			          	<input type="submit" class="checkout" name="checkout" value="Finalizar compra" />
+			          </td>
+			          <td class="numeric-cell">${carrinhoCompras.total }</td><td></td>
 			        </tr>
 			      </tfoot>
 		    </table>
