@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h1>Listando produtos</h1>
-	<div>${msg}</div>
+	<div><p>${msg}</p></div>
 	<table>
 		<tr>
 			<td>Id</td>
